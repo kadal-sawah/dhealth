@@ -64,7 +64,9 @@ writable/debugbar/*
 
 php_errors.log
 
-localfolder/*
+localfolder/logs
+localfolder/mysql
+localfolder/session
 !conf/apache.conf
 #-------------------------
 # User Guide Temp Files
