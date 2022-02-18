@@ -1,4 +1,28 @@
-## Docker Image for CodeIgniter4 development
+## Without Docker Image for CodeIgniter4 development
+
+Copy folder codeigniter4 keluar yang berada di localfolder/www/
+copy file env -> .env
+
+isi .env
+
+CI_ENVIRONMENT = development
+
+app.baseURL = 'http://localhost/'
+
+database.default.hostname = localhost
+database.default.database = dhealth
+database.default.username = root
+database.default.password = 'sesuaikan_password'
+database.default.DBDriver = MySQLi
+database.default.DBPrefix =
+
+run php spark serve 
+run php spark migrate
+run php spark db:seed Obat
+run php spark db:seed Alkes
+run php spark db:seed Signa
+
+## Using Docker Image for CodeIgniter4 development
 [![Docker Build Status](https://img.shields.io/docker/cloud/build/atsanna/codeigniter4?style=for-the-badge)](https://hub.docker.com/r/atsanna/codeigniter4/)
 [![Docker Image Version (tag latest semver)](https://img.shields.io/docker/v/atsanna/codeigniter4/v4.1.8?style=for-the-badge)](https://hub.docker.com/r/atsanna/codeigniter4/)
 ![Docker Pulls](https://img.shields.io/docker/pulls/atsanna/codeigniter4?style=for-the-badge)
