@@ -14,7 +14,7 @@ class Home extends BaseController
         $data = [];
         $data['content'] = 'beranda';
         // return view('layouts/content', $data, ['cache' => 120]);
-        return view('layouts/content', $data);
+        return view('coreview', $data);
     }
 
 }

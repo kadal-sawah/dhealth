@@ -35,6 +35,14 @@ $routes->get('/', 'Home::index');
 
 $routes->get('/beranda', 'Home::beranda');
 
+$routes->group('pages', static function ($routes){
+
+    $routes->group('obat', function($routes){
+        $routes->get('list', 'Obat::index', ['as' => 'view-obat']);
+    });
+
+});
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing

@@ -18,7 +18,7 @@
     
   <div class="app-wrapper">
 
-    <?php echo $this->section('content');?>
+    <?php echo $this->renderSection('content');?>
     
     <?php echo $this->include('layouts/footer');?>
     
