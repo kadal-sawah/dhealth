@@ -4,15 +4,15 @@ namespace App\Database\Seeds;
 
 use CodeIgniter\Database\Seeder;
 
-class Alkes extends Seeder
+class Signa extends Seeder
 {
     public function run()
     {
         $data = [
-            'kode_alkes' => 'ALK0001',
-            'nama_alkes' => 'Stetoskop',
-            'stok_alkes' => 50,
-            'keterangan' => 'Stetoskop Panas',
+            'kode_signas' => 'SGN0001',
+            'nama_signas' => '1 X Hari',
+            'stok_signas' => 100,
+            'keterangan' => 'Parasetamol Penurun Panas',
             'status' => 'active',
             'created_at' => null,
             'updated_at' => null,
@@ -21,6 +21,6 @@ class Alkes extends Seeder
             'modified_by' => null,
         ];
 
-        $this->db->table('alkes')->insert($data);
+        $this->db->table('signas')->insert($data);
     }
 }

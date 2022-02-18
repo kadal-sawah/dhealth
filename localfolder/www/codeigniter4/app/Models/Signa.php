@@ -4,17 +4,17 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class Alkes extends Model
+class Signa extends Model
 {
     protected $DBGroup          = 'default';
-    protected $table            = 'alkes';
+    protected $table            = 'signas';
     protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
     protected $insertID         = 0;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['kode_alkes', 'nama_alkes', 'stok_alkes', 'keterangan', 'status', 'created_at', 'updated_at', 'deleted_at', 'created_by', 'modified_by'];
+    protected $allowedFields    = ['kode_signa', 'nama_signa', 'keterangan', 'status', 'created_at', 'updated_at', 'deleted_at', 'created_by', 'modified_by'];
 
     // Dates
     protected $useTimestamps = true;

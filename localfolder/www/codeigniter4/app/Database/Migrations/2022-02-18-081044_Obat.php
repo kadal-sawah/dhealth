@@ -8,6 +8,7 @@ class Obat extends Migration
 {
     public function up()
     {
+        $forge = \Config\Database::forge();
         $this->forge->addField([
             'id'          => [
                 'type'           => 'INT',
@@ -28,7 +29,7 @@ class Obat extends Migration
             ],
             'stok_obat' => [
                 'type' => 'decimal',
-                'contraint' => 15,
+                'constraint' => 15,
                 'unsigned'  => true,
                 'null' => false,
                 'default' => 1,
@@ -39,7 +40,7 @@ class Obat extends Migration
             ],
             'status' => [
                 'type' => 'ENUM',
-                'contraint' => ['active','unactive'],
+                'constraint' => ['active','unactive'],
                 'default' => 'active'
             ],
             'created_at' => [

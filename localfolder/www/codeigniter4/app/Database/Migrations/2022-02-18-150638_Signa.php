@@ -4,7 +4,7 @@ namespace App\Database\Migrations;
 
 use CodeIgniter\Database\Migration;
 
-class Alkes extends Migration
+class Signa extends Migration
 {
     public function up()
     {
@@ -16,23 +16,16 @@ class Alkes extends Migration
                 'unsigned'       => true,
                 'auto_increment' => true,
             ],
-            'kode_alkes'       => [
+            'kode_signa'       => [
                 'type'       => 'VARCHAR',
                 'constraint' => 100,
                 'null' => false,
                 'unique' => true,
             ],
-            'nama_alkes' => [
+            'nama_signa' => [
                 'type' => 'varchar',
                 'constraint' => 250,
                 'null' => true,
-            ],
-            'stok_alkes' => [
-                'type' => 'decimal',
-                'constraint' => 15,
-                'unsigned'  => true,
-                'null' => false,
-                'default' => 1,
             ],
             'keterangan' => [
                 'type' => 'TEXT',
@@ -70,11 +63,11 @@ class Alkes extends Migration
         ]);
         $this->forge->addKey('id', true);
         $attributes = ['ENGINE' => 'InnoDB'];
-        $this->forge->createTable('alkes', false, $attributes);
+        $this->forge->createTable('signas', false, $attributes);
     }
 
     public function down()
     {
-        $this->forge->dropTable('alkes', false, true);
+        $this->forge->dropTable('signas', false, true);
     }
 }
