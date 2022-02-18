@@ -38,7 +38,15 @@ $routes->get('/beranda', 'Home::beranda');
 $routes->group('pages', static function ($routes){
 
     $routes->group('obat', function($routes){
-        $routes->get('list', 'Obat::index', ['as' => 'view-obat']);
+        $routes->get('list', 'ObatController::index', ['as' => 'view-obat']);
+        $routes->post('store', 'ObatController::store');
+        $routes->get('delete/(:num)', 'ObatController::delete/$1');
+    });
+
+    $routes->group('alkes', function($routes){
+        $routes->get('list', 'AlkesController::index', ['as' => 'view-alkes']);
+        $routes->post('store', 'AlkesController::store');
+        $routes->get('delete/(:num)', 'AlkesController::delete/$1');
     });
 
 });

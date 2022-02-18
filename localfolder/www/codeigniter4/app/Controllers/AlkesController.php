@@ -3,33 +3,27 @@
 namespace App\Controllers;
 
 use App\Controllers\BaseController;
-use App\Models\Obat;
-use CodeIgniter\API\ResponseTrait;
+use App\Models\Alkes;
 
-class ObatController extends BaseController
+class AlkesController extends BaseController
 {
-
-    use ResponseTrait;
-
     public function __construct()
     {
         $this->request = service('request');
-        $this->table = new Obat();
-
+        $this->table = new Alkes();
     }
 
     public function index()
     {
         $render = [];
         $render = [ 
-            'titleContent' => 'Master Obat',
+            'titleContent' => 'Master Alat Kesehatan',
             'data'         => $this->table->get()->getResult('array'),
         ];
-        return view('pages/obat/index', $render);
+        return view('pages/alkes/index', $render);
     }
 
     public function store(){
-        $table = new Obat();
         $payload = $this->request->getPost();
         $this->table->insert($payload);
         return redirect()->back();

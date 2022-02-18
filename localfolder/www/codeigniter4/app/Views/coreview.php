@@ -23,7 +23,7 @@
     <?php echo $this->include('layouts/footer');?>
     
   </div><!--//app-wrapper-->    					
-
+  
   <?php echo $this->include('layouts/script');?>
 
 </body>

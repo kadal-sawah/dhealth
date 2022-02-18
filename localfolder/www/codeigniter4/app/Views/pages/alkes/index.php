@@ -1,7 +1,7 @@
 <?php echo $this->extend('coreview');?>
 
 <?php echo $this->section('content');?>
-<?php echo $this->include('pages/obat/form');?>
+<?php echo $this->include('pages/alkes/form');?>
 
 <div class="app-content pt-3 p-md-3 p-ld-4">
 
@@ -44,14 +44,14 @@
               <?php 
               foreach($data as $key => $item): ?>
                 <tr>
-                    <td><?=$item['kode_obat']?></td>
-                    <td><?=$item['nama_obat']?></td>
-                    <td><?=$item['stok_obat']?></td>
+                    <td><?=$item['kode_alkes']?></td>
+                    <td><?=$item['nama_alkes']?></td>
+                    <td><?=$item['stok_alkes']?></td>
                     <td><?=$item['keterangan']?></td>
                     <td><?=$item['status']?></td>
                     <td><?=$item['created_at']?></td>
                     <td>
-                      <a href="<?=base_url('/pages/obat/delete/'.$item['id'])?>" class="btn btn-danger text-white" onclick="return confirm('Apakah anda yakin, ingin menghapus data ini?')" href="">HAPUS</a>
+                      <a href="<?=base_url('/pages/alkes/delete/'.$item['id'])?>" class="btn btn-danger text-white" onclick="return confirm('Apakah anda yakin, ingin menghapus data ini?')" href="">HAPUS</a>
                     </td>
                   </tr>
                   <?php endforeach; ?>
